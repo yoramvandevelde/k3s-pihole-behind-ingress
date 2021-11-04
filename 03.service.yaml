@@ -1,0 +1,14 @@
+---
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: "pihole-service"
+  namespace: pihole
+spec:
+  ports:
+    -
+      name: "http"
+      protocol: "TCP"
+      port: 80
+      targetPort: 8081
+      nodePort: 0
